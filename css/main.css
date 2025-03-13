@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans";
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    display: none;
 }
 
 .mortgage-calculator {
@@ -36,6 +41,22 @@ label {
     border-radius: 8px;
 }
 
+.input-wrapper-term {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 56px;
+    border: #a9bac4 2px solid;
+    border-radius: 8px;
+}
+
+.input-wrapper-rate {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 56px;
+    border: #a9bac4 2px solid;
+    border-radius: 8px;
+}
+
 .input-radio {
     display: flex;
     align-items: center;
@@ -59,27 +80,24 @@ label {
     border-radius: 8px 0 0 8px;
     width: 100%;
     cursor: pointer;
-    border-right: #a9bac4 2px solid;
 }
 
 #term {
     background-color: #E4F4FD;
     border-style: none;
     padding: 0 4px;
-    border-radius: 8px 0 0 8px;
+    border-radius: 0 8px 8px 0;
     width: 100%;
     cursor: pointer;
-    border-right: #a9bac4 2px solid;
 }
 
 #rate {
     background-color: #E4F4FD;
     border-style: none;
     padding: 0 12px;
-    border-radius: 8px 0 0 8px;
+    border-radius: 0 8px 8px 0;
     width: 100%;
     cursor: pointer;
-    border-right: #a9bac4 2px solid;
 }
 
 #type {
@@ -92,11 +110,17 @@ label {
     border-right: #a9bac4 2px solid;
 }
 
-#amount,
+#amount {
+    background-color: #FFFFFF;
+    border-radius: 0 8px 8px 0;
+    border-style: none;
+    padding: 0 12px;
+}
+
 #years,
 #pourcenta {
     background-color: #FFFFFF;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px 0 0 8px;
     border-style: none;
     padding: 0 12px;
 }
@@ -153,6 +177,11 @@ h3 {
     background-color: #09151c;
     padding: 18px;
     margin: 24px 0;
+}
+
+.error {
+    color: red;
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

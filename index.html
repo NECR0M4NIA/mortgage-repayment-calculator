@@ -11,7 +11,7 @@
     <title>Mortgage Calculator</title>
 
     <!-- FAVICON -->
-     <link rel="shortcut icon" href="./assets/calcul.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/calcul.svg" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/normalize.css">
@@ -45,30 +45,31 @@
                     </select>
                     <input type="number" name="amount" id="amount">
                 </div>
+                <p class="error hidden">This field is required</p>
             </div>
 
             <div class="input-group">
 
                 <label for="term">Mortgage Term</label>
-                <div class="input-wrapper">
+                <div class="input-wrapper-term">
                     <select name="term" id="term">
                         <option value="Years">Years</option>
                     </select>
                     <input type="number" name="years" id="years">
                 </div>
-
+                <p class="error hidden">This field is required</p>
             </div>
 
             <div class="input-group">
 
                 <label for="rate">Mortgage Rate</label>
-                <div class="input-wrapper">
+                <div class="input-wrapper-rate">
                     <select name="rate" id="rate">
                         <option value="%">%</option>
                     </select>
                     <input type="number" name="pourcenta" id="pourcenta">
                 </div>
-
+                <p class="error hidden">This field is required</p>
             </div>
 
             <div class="input-group">
@@ -82,6 +83,7 @@
                     <input type="radio" name="mortgage-type" id="interest">
                     <label for="interest">Interest Only</label>
                 </div>
+                <p class="error hidden">This field is required</p>
             </div>
 
             <a class="calculate-btn" href="#"> <img src="./assets/calcul.svg" alt=""> Calculate Repayments</a>
@@ -89,20 +91,27 @@
 
         <section class="results-container">
 
-            <h3>Your results</h2>
-            <p class="results-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <div class="final-results hidden">
+                <h3>Your results</h2>
+                    <p class="results-description">Your results are shown below based on the information you provided.
+                        To adjust the results, edit the form and click “calculate repayments” again.</p>
 
-            <div class="results-component">
+                    <div class="results-component">
 
-                <p class="results-description">Your monthly repayments</p>
+                        <p class="results-description">Your monthly repayments</p>
 
-                <h2>£1,797.74</h2>
+                        <h2>£1,797.74</h2>
 
-                <hr>
+                        <hr>
 
-                <p class="results-description">Total you'll repay over the term</p>
+                        <p class="results-description">Total you'll repay over the term</p>
 
-                <h3>£539,322.94</h3>
+                        <h3>£539,322.94</h3>
+
+                    </div>
+            </div>
+
+            <div class="before-results">
 
             </div>
 
